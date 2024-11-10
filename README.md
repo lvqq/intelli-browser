@@ -4,10 +4,11 @@
   <a href="https://github.com/lvqq/intelli-browser/tags">
     <img alt="GitHub tag (latest by date)" src="https://img.shields.io/github/v/release/lvqq/intelli-browser">
   </a>
-  <a href="https://github.com/GPTGenius/chatgpt-vercel/blob/main/LICENSE">
+  <a href="https://github.com/lvqq/intelli-browser/blob/main/LICENSE">
     <img alt="license" src="https://img.shields.io/github/license/lvqq/intelli-browser">
   </a>
 </p>
+
 
 ## Introduction
 Use natural language to write e2e test cases, powered by LLM and playwright
@@ -19,9 +20,11 @@ Use natural language to write e2e test cases, powered by LLM and playwright
 - 💭 More feautes are coming soon! Feel free to open an issue or submit a pull request
 
 ## Demo
-![](assets/demo.mp4)
+<video controls>
+  <source src="https://raw.githubusercontent.com/lvqq/intelli-browser/refs/heads/main/assets/demo.mp4" type="video/mp4">
+</video>
 
-Task:
+User Task
 > Click search and input "Web API", press "arrow down" once to select the second result. Then press "ENTER" to search it. Find "Keyboard API" nearby title "K" and click it
 
 ## Limitaions
@@ -82,11 +85,11 @@ If you want to generate the tranditional E2E test cases after executing, just ge
   //   'await page.waitForTimeout(3210)',
   //   "await page.mouse.type('Web API')",
   //   'await page.waitForTimeout(3064)',
-  //   "await this.page.keyboard.press('ArrowDown')",
+  //   "await page.keyboard.press('ArrowDown')",
   //   'await page.waitForTimeout(2917)',
-  //   "await this.page.keyboard.press('Enter')",
+  //   "await page.keyboard.press('Enter')",
   //   'await page.waitForTimeout(6471)',
-  //   "await this.page.keyboard.press('PageDown')",
+  //   "await page.keyboard.press('PageDown')",
   //   'await page.waitForTimeout(7021)',
   //   'await page.mouse.move(687.39, 923.4)',
   //   'await page.waitForTimeout(4501)',
