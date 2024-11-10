@@ -1,0 +1,32 @@
+{
+  "name": "@intelli-browser/core",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "dev": "tsup src/index.ts --watch --dts --format esm,cjs --sourcemap --clean",
+    "build": "tsup src/index.ts --dts --format esm,cjs --minify --sourcemap --clean",
+    "prepublishOnly": "pnpm build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.9.0"
+  },
+  "dependencies": {
+    "@intelli-browser/anthropic": "workspace:^",
+    "@intelli-browser/playwright": "workspace:^"
+  }
+}

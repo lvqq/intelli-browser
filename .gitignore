@@ -1,0 +1,31 @@
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+packages/*/tsconfig.tsbuildinfo
+
+# Coverage
+coverage
+
+# Compiled
+build
+dist
+
+# Dependency directories
+node_modules
+
+# OS X temporary files
+.DS_Store
+
+# VSCode settings
+.vscode
+
+# test output
+output*
+
+# timestamp file
+*.timestamp*
+
+# env file
+.env

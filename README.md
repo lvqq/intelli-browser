@@ -1,2 +1,2 @@
 # intelli-browser
-AI-powered browser for E2E auto test based on playwright
+Use natural language to write e2e test cases, powered by AI and playwright
