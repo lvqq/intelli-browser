@@ -20,9 +20,7 @@ Use natural language to write e2e test cases, powered by LLM and playwright
 - 💭 More feautes are coming soon! Feel free to open an issue or submit a pull request
 
 ## Demo
-<video controls>
-  <source src="https://raw.githubusercontent.com/lvqq/intelli-browser/refs/heads/main/assets/demo.mp4" type="video/mp4">
-</video>
+[MDN Demo Video](https://github.com/user-attachments/assets/274d2f78-39b6-4a7d-ab15-79dc08a2c13a)
 
 User Task
 > Click search and input "Web API", press "arrow down" once to select the second result. Then press "ENTER" to search it. Find "Keyboard API" nearby title "K" and click it
