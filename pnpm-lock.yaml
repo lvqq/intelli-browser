@@ -18,8 +18,8 @@ importers:
   example:
     devDependencies:
       '@intelli-browser/core':
-        specifier: ^0.1.0
-        version: 0.1.0(playwright@1.48.2)
+        specifier: workspace:^
+        version: link:../packages/core
       '@playwright/test':
         specifier: ^1.48.2
         version: 1.48.2
@@ -325,17 +325,6 @@ packages:
     engines: {node: ^18.17.0 || ^20.3.0 || >=21.0.0}
     cpu: [x64]
     os: [win32]
-
-  '@intelli-browser/anthropic@0.1.0':
-    resolution: {integrity: sha512-tBCkZQ/HLJtQOY6OTT3W+dZbRgeq3LrHNgAjXPR6umCSuXP/cuOt4GNsF+HfMfOfRu9oMykglA6Ee38tSND3Iw==}
-
-  '@intelli-browser/core@0.1.0':
-    resolution: {integrity: sha512-k0ZNW3KWmtGguLlUaegcziul9c8+NOKzBjfX6NFsIZ9qVOea4+c7c3h1MTzUw8GGdE6XZDKLMzIjUf4cF7JPWg==}
-
-  '@intelli-browser/playwright@0.1.0':
-    resolution: {integrity: sha512-cPL9XysmMByQYMc3cL2BPgPp1qPBGoNBQMzraRusLWmEMWOOuPNFs2e5nnes2vck5WIWNSqafa8UYR+Nq/usbg==}
-    peerDependencies:
-      playwright: '*'
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
@@ -1068,25 +1057,6 @@ snapshots:
 
   '@img/sharp-win32-x64@0.33.5':
     optional: true
-
-  '@intelli-browser/anthropic@0.1.0':
-    dependencies:
-      '@anthropic-ai/sdk': 0.32.1
-    transitivePeerDependencies:
-      - encoding
-
-  '@intelli-browser/core@0.1.0(playwright@1.48.2)':
-    dependencies:
-      '@intelli-browser/anthropic': 0.1.0
-      '@intelli-browser/playwright': 0.1.0(playwright@1.48.2)
-    transitivePeerDependencies:
-      - encoding
-      - playwright
-
-  '@intelli-browser/playwright@0.1.0(playwright@1.48.2)':
-    dependencies:
-      playwright: 1.48.2
-      sharp: 0.33.5
 
   '@isaacs/cliui@8.0.2':
     dependencies:

@@ -11,7 +11,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
-    "@intelli-browser/core": "^0.1.0",
+    "@intelli-browser/core": "workspace:^",
     "@playwright/test": "^1.48.2",
     "@types/node": "^22.9.0",
     "playwright": "*"

@@ -44,8 +44,12 @@ export class AnthropicClient {
     this.messages = [];
   }
 
-  public clear() {
+  public clean() {
     this.messages = [];
+  }
+
+  public getMessages() {
+    return this.messages;
   }
 
   public async prompt({ width, height, message }: PromptOption) {
