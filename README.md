@@ -11,7 +11,7 @@
 
 
 ## Introduction
-Use natural language to write e2e test cases, powered by LLM and playwright
+Use natural language to control your browser, powered by LLM and playwright
 
 
 ## Features
@@ -29,7 +29,25 @@ User Task
 - Only *claude-3-5-sonnet* LLM is supported for now
 - Only *playwright* framework is supported for now
 
+## Requirement
+- NodeJS >= 18
+
 ## Usage
+
+### Example
+The example is under directory `example`, try the following steps to have an experience:
+```bash
+# clone the repository
+git clone https://github.com/lvqq/intelli-browser.git
+
+# install dependencies
+pnpm i
+
+# add your ANTHROPIC_API_KEY
+
+# run demo
+pnpm run demo
+```
 
 ### Installation
 ```bash
