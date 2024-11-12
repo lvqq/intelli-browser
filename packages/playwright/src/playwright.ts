@@ -169,7 +169,7 @@ export class PlayWrightAgent {
       case 'key':
         const pressKey = this.getPlaywrightPressKey(input?.text || '')
         await this.page.keyboard.press(pressKey)
-        this.actions.push(`await this.page.keyboard.press('${pressKey}')`)
+        this.actions.push(`await page.keyboard.press('${pressKey}')`)
         if (showAction) {
           console.log(`Action: key ${pressKey}\n`)
         }

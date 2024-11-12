@@ -1,5 +1,5 @@
 import Anthropic from '@anthropic-ai/sdk';
-import { BetaTextBlockParam, BetaMessageParam, BetaToolUseBlock } from '@anthropic-ai/sdk/resources/beta/messages/messages';
+import { BetaMessageParam, BetaToolUseBlock } from '@anthropic-ai/sdk/resources/beta/messages/messages';
 
 interface AnthropicClientProps {
   apiKey?: string;
@@ -52,12 +52,28 @@ export class AnthropicClient {
     return this.messages;
   }
 
+  // filter previous images to save tokens
+  public filterAllImages(messages: BetaMessageParam[]) {
+    return messages.map(msg => ({
+      ...msg,
+      content: typeof msg.content === 'string' ? msg.content : msg.content.map(item => {
+        if (item.type === 'tool_result' && typeof item.content !== 'string') {
+          return {
+            ...item,
+            content: item.content?.filter(c => c.type !== 'image')
+          }
+        }
+        return item;
+      })
+    }))
+  }
+
   public async prompt({ width, height, message }: PromptOption) {
     const prompt: BetaMessageParam = { role: 'user', content: message };
     const { content, role } = await this.client.beta.messages.create({
       max_tokens: 1024,
       system: systemPrompt,
-      messages: this.messages.concat([prompt]),
+      messages: this.filterAllImages(this.messages).concat([prompt]),
       tools: [
         {
           type: 'computer_20241022',

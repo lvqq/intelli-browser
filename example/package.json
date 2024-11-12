@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "postinstall": "pnpm exec playwright install",
     "start": "node index.js"
   },
   "keywords": [],

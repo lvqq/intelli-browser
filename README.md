@@ -40,14 +40,18 @@ The example is under directory `example`, try the following steps to have an exp
 # clone the repository
 git clone https://github.com/lvqq/intelli-browser.git
 
-# install dependencies
+# install dependencies and browsers
 pnpm i
+
+# build all packages
+pnpm -r build
 
 # add your ANTHROPIC_API_KEY
 
 # run demo
 pnpm run demo
 ```
+
 
 ### Installation
 ```bash
@@ -92,27 +96,31 @@ If you want to generate the tranditional E2E test cases after executing, just ge
   })
 
   console.log(e2e)
-  // As the demo shows:
-  // [
-  //   'await page.mouse.move(1241.61, 430.2)',
-  //   'await page.waitForTimeout(2266)',
-  //   'await page.mouse.down()',
-  //   'await page.mouse.up()',
-  //   'await page.waitForTimeout(3210)',
-  //   "await page.mouse.type('Web API')",
-  //   'await page.waitForTimeout(3064)',
-  //   "await page.keyboard.press('ArrowDown')",
-  //   'await page.waitForTimeout(2917)',
-  //   "await page.keyboard.press('Enter')",
-  //   'await page.waitForTimeout(6471)',
-  //   "await page.keyboard.press('PageDown')",
-  //   'await page.waitForTimeout(7021)',
-  //   'await page.mouse.move(687.39, 923.4)',
-  //   'await page.waitForTimeout(4501)',
-  //   'await page.mouse.down()',
-  //   'await page.mouse.up()'
-  // ]
 
+```
+
+As the demo video shows:
+
+```javascript
+  [
+    'await page.mouse.move(1241.61, 430.2)',
+    'await page.waitForTimeout(2266)',
+    'await page.mouse.down()',
+    'await page.mouse.up()',
+    'await page.waitForTimeout(3210)',
+    "await page.mouse.type('Web API')",
+    'await page.waitForTimeout(3064)',
+    "await page.keyboard.press('ArrowDown')",
+    'await page.waitForTimeout(2917)',
+    "await page.keyboard.press('Enter')",
+    'await page.waitForTimeout(6471)',
+    "await page.keyboard.press('PageDown')",
+    'await page.waitForTimeout(7021)',
+    'await page.mouse.move(687.39, 923.4)',
+    'await page.waitForTimeout(4501)',
+    'await page.mouse.down()',
+    'await page.mouse.up()'
+  ]
 ```
 
 
@@ -145,7 +153,7 @@ const client = new IntelliBrowser({
 
 ## Credits
 - [Computer Use](https://docs.anthropic.com/en/docs/build-with-claude/computer-use)
-- [agent.ext](https://github.com/corbt/agent.exe)
+- [agent.exe](https://github.com/corbt/agent.exe)
 
 ## License
 Based on [MIT License](./LICENSE)
