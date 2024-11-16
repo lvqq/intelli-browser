@@ -1,6 +1,6 @@
 {
   "name": "intelli-browser",
-  "packageManager": "pnpm@9.12.3",
+  "packageManager": "pnpm@9.13.2",
   "private": true,
   "description": "",
   "scripts": {
@@ -9,10 +9,13 @@
     "dev-anthropic": "pnpm --filter @intelli-browser/anthropic dev",
     "dev-core": "pnpm --filter @intelli-browser/core dev",
     "dev-playwright": "pnpm --filter @intelli-browser/playwright dev",
-    "demo": "pnpm --filter ./example start"
+    "demo": "pnpm --filter ./example start",
+    "build:all": "pnpm run build-anthropic && pnpm run build-core && pnpm run build-playwright",
+    "build-anthropic": "pnpm --filter @intelli-browser/anthropic build",
+    "build-core": "pnpm --filter @intelli-browser/core build",
+    "build-playwright": "pnpm --filter @intelli-browser/playwright build",
+    "publish:all": "pnpm --filter @intelli-browser/* publish"
   },
-  "keywords": [],
-  "author": "",
   "license": "MIT",
   "devDependencies": {
     "tsup": "^8.3.5",

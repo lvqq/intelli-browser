@@ -13,14 +13,26 @@
       "require": "./dist/index.cjs"
     }
   },
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "dev": "tsup src/index.ts --watch --dts --format esm,cjs --sourcemap --clean",
     "build": "tsup src/index.ts --dts --format esm,cjs --minify --sourcemap --clean",
     "prepublishOnly": "pnpm build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "files": [
+    "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/lvqq/intelli-browser/issues"
+  },
+  "homepage": "https://github.com/lvqq/intelli-browser#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lvqq/intelli-browser.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@intelli-browser/anthropic": "workspace:^",
